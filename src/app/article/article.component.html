@@ -1,0 +1,2 @@
+<input ref-title on-keydown.enter="setTitle(title.value)" on-keyup="checkStale(title.value)" />
+<h1 [style.color]="isState ? 'red' : 'green'">{{myTitle}}</h1>
