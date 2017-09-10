@@ -2,7 +2,7 @@ import { DataService } from './services/data.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 
@@ -11,6 +11,7 @@ import { HeaderComponent } from './header/header.component';
 import { DataComponent } from './data/data.component';
 import { HomeComponent } from './home/home.component';
 import { ArticleComponent } from './article/article.component';
+import { ArticleEditorComponent } from './article-editor/article-editor.component';
 
 const appRoute:  Routes = [
   { path: '', component: HomeComponent },
@@ -23,13 +24,15 @@ const appRoute:  Routes = [
     HeaderComponent,
     DataComponent,
     HomeComponent,
-    ArticleComponent
+    ArticleComponent,
+    ArticleEditorComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoute),
     FormsModule,
-    HttpModule
+    HttpModule,
+    ReactiveFormsModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
